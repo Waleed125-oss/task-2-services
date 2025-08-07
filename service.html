@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Professional business services like Web Design, Development, SEO, and more.">
+  <title>Our Services | Your Business</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #3b82f6;
+      --text-color: #1f2937;
+      --bg-color: #f9fafb;
+      --light-color: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: var(--light-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    header {
+      margin-top: 70px;
+      background: url('https://source.unsplash.com/1600x600/?business,technology') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: var(--primary-color);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      animation: fadeUp 1s ease-in;
+    }
+
+    .service-card {
+      background: var(--light-color);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .contact-cta {
+      text-align: center;
+      background: var(--primary-color);
+      color: white;
+      padding: 3rem 1rem;
+      border-radius: 10px;
+      animation: fadeIn 1s ease;
+    }
+
+    .contact-cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-cta .btn {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    .contact-cta .btn:hover {
+      background: var(--secondary-color);
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
+    }
+
+    /* Scroll-to-top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      nav .container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <nav>
+    <div class="container">
+      <div><strong>Your Business</strong></div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🌟 Hero Section -->
+  <header>
+    <div class="hero-content">
+      <h1>Elevate Your Business</h1>
+      <p>Professional services tailored to your goals</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </header>
+
+  <!-- 🧰 Services Section -->
+  <section class="section" id="services">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/web-design.png" alt="Web Design Icon"/>
+        <h3>Web Design</h3>
+        <p>Custom, responsive websites that reflect your brand and engage your audience.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/marketing.png" alt="Marketing Icon"/>
+        <h3>Digital Marketing</h3>
+        <p>Targeted strategies to boost your visibility and drive traffic to your site.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/source-code.png" alt="Dev Icon"/>
+        <h3>Development</h3>
+        <p>Robust frontend and backend development to power your online presence.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/customer-support.png" alt="Support Icon"/>
+        <h3>Support</h3>
+        <p>Ongoing maintenance and support to keep your site secure and updated.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/seo.png" alt="SEO Icon"/>
+        <h3>SEO Optimization</h3>
+        <p>Improve search rankings and drive organic traffic with smart SEO tactics.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/online-store.png" alt="E-Commerce Icon"/>
+        <h3>E-Commerce</h3>
+        <p>Set up online shops with secure, scalable, and beautiful storefronts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Contact CTA -->
+  <section class="section contact-cta" id="contact">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Let's discuss your ideas and turn them into reality.</p>
+    <a href="mailto:contact@example.com" class="btn">Contact Us</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Business Name. All rights reserved.
+  </footer>
+
+  <!-- 🔝 Scroll-to-Top Button -->
+  <button id="scrollTopBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    // Show scroll to top button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
